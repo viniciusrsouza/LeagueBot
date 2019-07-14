@@ -1,0 +1,4 @@
+**LeagueBot:**
+    **-Comandos:**
+        *help*: Imprime esta mensagem
+        *champion* **<champion> <lane>**: Mostra runas e MatchUps do campeão na lane escolhida
