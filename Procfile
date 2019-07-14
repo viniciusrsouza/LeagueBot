@@ -1,1 +1,1 @@
-worker: java -jar target/supervinicius-0.1-SNAPSHOT-jar-with-dependencies.jar
+worker: java -jar target/supervinicius-1.0-jar-with-dependencies
