@@ -68,7 +68,7 @@ class ChampionCommand: Command("champion") {
             sendErrorMessage(InvalidCommand.ArguementMissing, event.channel)
 
         printdbg("starting loadImage")
-        val p = Runtime.getRuntime().exec("python3 loadImage.py")
+        val p = Runtime.getRuntime().exec("python loadImage.py")
         val exitValue = p.waitFor()
         printdbg("loadImage finished with code $exitValue")
 
