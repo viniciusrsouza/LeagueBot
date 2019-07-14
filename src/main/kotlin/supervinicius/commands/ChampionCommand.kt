@@ -75,17 +75,17 @@ class ChampionCommand: Command("champion") {
         event.channel.sendMessage("Ta aí, querido").queue()
         event.channel.sendFile(File("champion.png"), "$name.png").queue()
 
-        File("champion.json").delete()
-        File("champion.png").delete()
-        File("first_spell.png").delete()
-        File("second_spell.png").delete()
-        File("icon.png").delete()
-        File("main_rune.png").delete()
-        File("rune1.png").delete()
-        File("rune2.png").delete()
-        File("rune3.png").delete()
-        File("rune4.png").delete()
-        File("rune5.png").delete()
+//        File("champion.json").delete()
+//        File("champion.png").delete()
+//        File("first_spell.png").delete()
+//        File("second_spell.png").delete()
+//        File("icon.png").delete()
+//        File("main_rune.png").delete()
+//        File("rune1.png").delete()
+//        File("rune2.png").delete()
+//        File("rune3.png").delete()
+//        File("rune4.png").delete()
+//        File("rune5.png").delete()
 
     }
 

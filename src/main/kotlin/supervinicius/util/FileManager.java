@@ -44,7 +44,7 @@ public class FileManager {
 
     public boolean writeToFile(String str){
         try {
-            PrintWriter writer = new PrintWriter("champion.json", "UTF-8");
+            PrintWriter writer = new PrintWriter( new File("champion.json"), "UTF-8");
             writer.println(str);
             writer.close();
             return true;

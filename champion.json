@@ -1,0 +1,16 @@
+{
+  "name": "ashe",
+  "runes": [
+    "opgg-static.akamaized.net/images/lol/perk/8229.png",
+    "opgg-static.akamaized.net/images/lol/perk/8226.png",
+    "opgg-static.akamaized.net/images/lol/perk/8210.png",
+    "opgg-static.akamaized.net/images/lol/perk/8237.png",
+    "opgg-static.akamaized.net/images/lol/perk/9103.png",
+    "opgg-static.akamaized.net/images/lol/perk/8014.png"
+  ],
+  "spells": {
+    "first": "opgg-static.akamaized.net/images/lol/spell/SummonerFlash.png",
+    "second": "opgg-static.akamaized.net/images/lol/spell/SummonerHeal.png"
+  },
+  "icon": "opgg-static.akamaized.net/images/lol/champion/Ashe.png"
+}
