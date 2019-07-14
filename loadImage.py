@@ -30,17 +30,17 @@ def download_images(champion):
 
 
 def create_final_image():
-    final_image = Image.open("template.png")
+    final_image = Image.open("template.png").convert("RGBA")
 
     spells = (Image.open("first_spell.png").resize((64, 64)),
               Image.open("second_spell.png").resize((64, 64)))
-    final_image.paste(spells[0], box=(9, 175))
-    final_image.paste(spells[1], box=(92, 175))
+    final_image.paste(spells[0], box=(9, 215))
+    final_image.paste(spells[1], box=(92, 215))
     spells[0].close()
     spells[1].close()
 
     mainrune = Image.open("main_rune.png").resize((128, 128))
-    final_image = trans_paste(mainrune, final_image, (204, 20))
+    final_image = trans_paste(mainrune, final_image, (204, 60))
     mainrune.close()
 
     runes = (
@@ -50,17 +50,17 @@ def create_final_image():
         Image.open("rune4.png").resize((64, 64)),
         Image.open("rune5.png").resize((64, 64))
     )
-    final_image = trans_paste(runes[0], final_image, (195, 169))
-    final_image = trans_paste(runes[1], final_image, (195, 242))
-    final_image = trans_paste(runes[2], final_image, (195, 315))
-    final_image = trans_paste(runes[3], final_image, (277, 199))
-    final_image = trans_paste(runes[4], final_image, (277, 277))
+    final_image = trans_paste(runes[0], final_image, (195, 209))
+    final_image = trans_paste(runes[1], final_image, (195, 282))
+    final_image = trans_paste(runes[2], final_image, (195, 355))
+    final_image = trans_paste(runes[3], final_image, (277, 239))
+    final_image = trans_paste(runes[4], final_image, (277, 317))
 
     for img in runes:
         img.close()
 
     icon = Image.open("icon.png").resize((120, 120))
-    final_image = trans_paste(icon, final_image, (22, 23))
+    final_image = trans_paste(icon, final_image, (22, 63))
     icon.close()
 
     final_image.save("champion.png")
