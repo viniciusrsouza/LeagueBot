@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5a77f57-55f1-4e23-8f90-c5ad4ed3059d" name="Default Changelist" comment="" />
+    <list default="true" id="c5a77f57-55f1-4e23-8f90-c5ad4ed3059d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBotLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBotLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/ChampionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/ChampionCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command$InvalidCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command$InvalidCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/HelpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/HelpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/dataclasses/Champion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/dataclasses/Champion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/listeners/DiscordListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/listeners/DiscordListener.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
     <option name="y" value="82" />
     <option name="width" value="1346" />
@@ -131,30 +141,6 @@
               <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +255,7 @@
       <workItem from="1563034307801" duration="14120000" />
       <workItem from="1563049627369" duration="3128000" />
       <workItem from="1563055069966" duration="5343000" />
-      <workItem from="1563065744020" duration="8647000" />
+      <workItem from="1563065744020" duration="9243000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, command champion stops after downloading resources">
       <created>1563066549696</created>
@@ -289,7 +275,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37364000" />
+    <option name="totallyTimeSpent" value="37960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -301,7 +287,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="734" extended-state="7" />
+    <frame x="-1" y="-1" width="1368" height="734" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27045456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
