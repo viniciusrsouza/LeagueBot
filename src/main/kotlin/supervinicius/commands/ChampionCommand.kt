@@ -6,6 +6,7 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import supervinicius.dataclasses.Champion
 import supervinicius.util.FileManager
+import java.io.File
 
 class ChampionCommand: Command("champion") {
 
@@ -27,6 +28,7 @@ class ChampionCommand: Command("champion") {
     )
 
     override fun run(event: GuildMessageReceivedEvent) {
+        event.channel.sendMessage("um momento, amigo").queue()
         //message validation
         val splitMessage: ArrayList<String>
         try{
@@ -69,6 +71,22 @@ class ChampionCommand: Command("champion") {
         val p = Runtime.getRuntime().exec("python3 loadImage.py")
         val exitValue = p.waitFor()
         printdbg("loadImage finished with code $exitValue")
+
+        event.channel.sendMessage("Ta aí, querido").queue()
+        event.channel.sendFile(File("champion.png"), "$name.png").queue()
+
+        File("champion.json").delete()
+        File("champion.png").delete()
+        File("first_spell.png").delete()
+        File("second_spell.png").delete()
+        File("icon.png").delete()
+        File("main_rune.png").delete()
+        File("rune1.png").delete()
+        File("rune2.png").delete()
+        File("rune3.png").delete()
+        File("rune4.png").delete()
+        File("rune5.png").delete()
+
     }
 
     private fun championParser(name: String, lane: String): Champion {

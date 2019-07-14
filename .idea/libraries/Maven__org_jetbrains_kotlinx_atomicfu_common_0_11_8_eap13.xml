@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jetbrains.kotlinx:atomicfu-common:0.11.8-eap13">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/atomicfu-common/0.11.8-eap13/atomicfu-common-0.11.8-eap13.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/atomicfu-common/0.11.8-eap13/atomicfu-common-0.11.8-eap13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/atomicfu-common/0.11.8-eap13/atomicfu-common-0.11.8-eap13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
