@@ -25,6 +25,12 @@ def download_images(champion):
         i += 1
         req.urlretrieve("http://" + rune, name)
 
+    i = 1
+    for attr in champion["attributes"]:
+        name = "attribute" + str(i) + ".png"
+        i += 1
+        req.urlretrieve("http://" + attr, name)
+
     req.urlretrieve("http://" + champion["spells"]["first"], "first_spell.png")
     req.urlretrieve("http://" + champion["spells"]["second"], "second_spell.png")
 
@@ -39,6 +45,19 @@ def create_final_image():
     spells[0].close()
     spells[1].close()
 
+    attributes = (
+        Image.open("attribute1.png").resize(48, 48),
+        Image.open("attribute2.png").resize(48, 48),
+        Image.open("attribute3.png").resize(48, 48)
+    )
+
+    final_image = trans_paste(attributes[0], final_image, (340, 231))
+    final_image = trans_paste(attributes[1], final_image, (340, 290))
+    final_image = trans_paste(attributes[2], final_image, (340, 349))
+
+    for img in attributes:
+        img.close()
+
     mainrune = Image.open("main_rune.png").resize((128, 128))
     final_image = trans_paste(mainrune, final_image, (204, 60))
     mainrune.close()
@@ -50,11 +69,11 @@ def create_final_image():
         Image.open("rune4.png").resize((64, 64)),
         Image.open("rune5.png").resize((64, 64))
     )
-    final_image = trans_paste(runes[0], final_image, (195, 209))
-    final_image = trans_paste(runes[1], final_image, (195, 282))
-    final_image = trans_paste(runes[2], final_image, (195, 355))
-    final_image = trans_paste(runes[3], final_image, (277, 239))
-    final_image = trans_paste(runes[4], final_image, (277, 317))
+    final_image = trans_paste(runes[0], final_image, (175, 209))
+    final_image = trans_paste(runes[1], final_image, (175, 283))
+    final_image = trans_paste(runes[2], final_image, (175, 357))
+    final_image = trans_paste(runes[3], final_image, (257, 246))
+    final_image = trans_paste(runes[4], final_image, (257, 320))
 
     for img in runes:
         img.close()

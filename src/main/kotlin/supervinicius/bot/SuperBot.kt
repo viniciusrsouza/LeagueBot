@@ -12,6 +12,8 @@ class SuperBot (val TOKEN: String) {
         ChampionCommand()
     )
 
+    val champions: ArrayList<String> = ArrayList()
+
     fun start() {
         val discordListener = DiscordListener(this)
 

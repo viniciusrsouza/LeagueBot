@@ -64,7 +64,7 @@ class ChampionCommand: Command("champion") {
         val parser = GsonBuilder().setPrettyPrinting().create()
         val champion = parser.toJson(championParser(name, laneMap.getValue(lane)))
 
-        if(!FileManager.getInstance().writeToFile(champion))
+        if(!FileManager.getInstance().writeToFile(champion, "champion.json"))
             sendErrorMessage(InvalidCommand.ArguementMissing, event.channel)
 
         printdbg("starting loadImage")
@@ -90,15 +90,17 @@ class ChampionCommand: Command("champion") {
     }
 
     private fun championParser(name: String, lane: String): Champion {
-        val url = "http://www.op.gg/champion/$name/statistics/$lane"
+        val url = "http://op.gg/champion/$name/statistics/$lane"
+        printdbg(url)
         val site = Jsoup.connect(url).get()
 
         val spells = findSpells(site)
         printdbg("${spells.first} | ${spells.second}")
         val runes = findRunes(site)
         val icon = findIcon(site)
+        val attributes = findAttributes(site)
 
-        return Champion(name, runes, spells, icon)
+        return Champion(name, runes, attributes, spells, icon)
     }
 
     private fun findIcon(site: Document): String{
@@ -108,7 +110,7 @@ class ChampionCommand: Command("champion") {
             .substringBetween("<img src=\"//", "?")
     }
 
-    private fun findRunes(site: Document): ArrayList<String>{
+    private fun findRunes(site: Document): List<String>{
         val runeElements = site.getElementsByClass("perk-page__item")
             .filter{ it.hasClass("perk-page__item--active") }
 
@@ -120,6 +122,19 @@ class ChampionCommand: Command("champion") {
         }
 
         return runes
+    }
+
+    private fun findAttributes(site: Document): List<String>{
+        val attributes = ArrayList<String>()
+        val elements = site.getElementsByClass("fragment__row")
+        for(i in 0..2){
+            val attr = elements[i].getElementsByClass("active").first()
+            attributes.add(attr.toString().substringBetween(
+                "src=\"//",
+                "\" class"
+            ))
+        }
+        return attributes
     }
 
     private fun findSpells(site: Document): Pair<String, String> {
