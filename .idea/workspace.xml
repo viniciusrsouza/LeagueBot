@@ -117,7 +117,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-1" />
     <option name="y" value="82" />
     <option name="width" value="1346" />
@@ -286,7 +286,7 @@
       <workItem from="1563034307801" duration="14120000" />
       <workItem from="1563049627369" duration="3128000" />
       <workItem from="1563055069966" duration="5343000" />
-      <workItem from="1563065744020" duration="12353000" />
+      <workItem from="1563065744020" duration="12144000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, command champion stops after downloading resources">
       <created>1563066549696</created>
@@ -313,7 +313,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41070000" />
+    <option name="totallyTimeSpent" value="40861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +325,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="734" extended-state="6" />
+    <frame x="-1" y="-1" width="1368" height="734" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27045456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
