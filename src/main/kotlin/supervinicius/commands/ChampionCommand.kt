@@ -90,7 +90,7 @@ class ChampionCommand: Command("champion") {
     }
 
     private fun championParser(name: String, lane: String): Champion {
-        val url = "http://op.gg/champion/$name/statistics/$lane"
+        val url = "http://www.op.gg/champion/$name/statistics/$lane"
         printdbg(url)
         val site = Jsoup.connect(url).get()
 

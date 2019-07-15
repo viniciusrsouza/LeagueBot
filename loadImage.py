@@ -46,9 +46,9 @@ def create_final_image():
     spells[1].close()
 
     attributes = (
-        Image.open("attribute1.png").resize(48, 48),
-        Image.open("attribute2.png").resize(48, 48),
-        Image.open("attribute3.png").resize(48, 48)
+        Image.open("attribute1.png").resize((48, 48)),
+        Image.open("attribute2.png").resize((48, 48)),
+        Image.open("attribute3.png").resize((48, 48))
     )
 
     final_image = trans_paste(attributes[0], final_image, (340, 231))
