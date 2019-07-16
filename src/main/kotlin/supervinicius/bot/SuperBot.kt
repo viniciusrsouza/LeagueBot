@@ -4,12 +4,14 @@ import net.dv8tion.jda.api.AccountType
 import net.dv8tion.jda.api.JDABuilder
 import supervinicius.commands.ChampionCommand
 import supervinicius.commands.HelpCommand
+import supervinicius.commands.LogCommand
 import supervinicius.listeners.DiscordListener
 
 class SuperBot (val TOKEN: String) {
     val commands = listOf(
         HelpCommand(),
-        ChampionCommand()
+        ChampionCommand(),
+        LogCommand()
     )
 
     val champions: ArrayList<String> = ArrayList()

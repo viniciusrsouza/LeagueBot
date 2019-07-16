@@ -5,9 +5,10 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
 import supervinicius.util.Logger
 
 abstract class Command(val label: String) {
+    val logger: Logger = Logger.getInstance()
 
     enum class InvalidCommand{
-        ArguementMissing
+        ArgumentMissing
     }
 
     infix fun handle(event: GuildMessageReceivedEvent): Boolean {
@@ -24,13 +25,9 @@ abstract class Command(val label: String) {
     fun sendErrorMessage(error: InvalidCommand, channel: TextChannel)
     {
         when (error){
-            InvalidCommand.ArguementMissing -> {
+            InvalidCommand.ArgumentMissing -> {
                 channel.sendMessage("Comando inválido").queue()
             }
         }
-    }
-
-    fun printdbg(message: Any){
-        Logger.getInstance().debug(message)
     }
 }

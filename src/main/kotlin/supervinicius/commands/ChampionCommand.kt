@@ -28,74 +28,72 @@ class ChampionCommand: Command("champion") {
     )
 
     override fun run(event: GuildMessageReceivedEvent) {
+        val f = FileManager.getInstance()
+
         event.channel.sendMessage("um momento, amigo").queue()
         //message validation
         val splitMessage: ArrayList<String>
         try{
             splitMessage = event.message.contentRaw.split(" ") as ArrayList
         }catch (e: Exception) {
-            sendErrorMessage(InvalidCommand.ArguementMissing, event.channel)
+            logger.error("failed to cast message to ArrayList")
+            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
             return
         }
 
         val lane = splitMessage.last()
 
-        printdbg("size: ${splitMessage.size}")
+        logger.debug("size: ${splitMessage.size}")
 
 
         if( (splitMessage.size < 3) or
             !laneMap.containsKey(lane) ) {
-            sendErrorMessage(InvalidCommand.ArguementMissing, event.channel)
+            logger.warn("Invalid command: lane doesn't exist or message is missing arguments")
+            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
             return
         }
 
         splitMessage.remove(lane)
         splitMessage.removeAt(0)
-        printdbg(splitMessage)
+        logger.debug(splitMessage)
 
         var name = ""
         splitMessage.forEach{ name += it }
         name = name.replace("'", "")
             .replace(".", "")
             .toLowerCase()
-        printdbg("Champion name: $name")
+        logger.debug("Champion name: $name")
         //end of validation
 
         val parser = GsonBuilder().setPrettyPrinting().create()
         val champion = parser.toJson(championParser(name, laneMap.getValue(lane)))
 
-        if(!FileManager.getInstance().writeToFile(champion, "champion.json"))
-            sendErrorMessage(InvalidCommand.ArguementMissing, event.channel)
+        if(!f.writeToFile(champion, "champion.json")) {
+            logger.error("failed to write champion.json")
+            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
+        }
 
-        printdbg("starting loadImage")
-        val p = Runtime.getRuntime().exec("python loadImage.py")
+        logger.debug("starting loadImage")
+        val p = Runtime.getRuntime().exec("python3 loadImage.py")
         val exitValue = p.waitFor()
-        printdbg("loadImage finished with code $exitValue")
+        logger.debug("loadImage finished with code $exitValue")
 
         event.channel.sendMessage("Ta aí, querido").queue()
-        event.channel.sendFile(File("champion.png"), "$name.png").queue()
+        event.channel.sendFile(File(f.getFullPath("champion.png")), "$name.png").queue()
 
-//        File("champion.json").delete()
-//        File("champion.png").delete()
-//        File("first_spell.png").delete()
-//        File("second_spell.png").delete()
-//        File("icon.png").delete()
-//        File("main_rune.png").delete()
-//        File("rune1.png").delete()
-//        File("rune2.png").delete()
-//        File("rune3.png").delete()
-//        File("rune4.png").delete()
-//        File("rune5.png").delete()
-
+        if( !f.clearTemp() ){
+            logger.warn("failed to delete old champion files! check the log file")
+            logger.saveLog()
+        }
     }
 
     private fun championParser(name: String, lane: String): Champion {
         val url = "http://www.op.gg/champion/$name/statistics/$lane"
-        printdbg(url)
+        logger.debug(url)
         val site = Jsoup.connect(url).get()
 
         val spells = findSpells(site)
-        printdbg("${spells.first} | ${spells.second}")
+        logger.debug("${spells.first} | ${spells.second}")
         val runes = findRunes(site)
         val icon = findIcon(site)
         val attributes = findAttributes(site)
@@ -164,7 +162,7 @@ class ChampionCommand: Command("champion") {
             val champion = element.toString()
                 .substringBetween("<img src=\"//", "?")
             val winrate = element.getElementsByTag("b")
-            printdbg(winrate)
+            logger.debug(winrate)
         }
 
         return weakness
