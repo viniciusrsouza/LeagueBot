@@ -7,7 +7,7 @@ import supervinicius.commands.HelpCommand
 import supervinicius.commands.LogCommand
 import supervinicius.listeners.DiscordListener
 
-class SuperBot (val TOKEN: String) {
+class SuperBot (private val TOKEN: String) {
     val commands = listOf(
         HelpCommand(),
         ChampionCommand(),

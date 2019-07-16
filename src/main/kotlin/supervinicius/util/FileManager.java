@@ -13,30 +13,26 @@ public class FileManager {
         return instance;
     }
 
-    public File getFileFromResource(String fileName) {
-        ClassLoader classLoader = getClass().getClassLoader();
-        URL resource = classLoader.getResource(fileName);
-
-        if(resource == null) {
-            throw new IllegalArgumentException("File not found!");
+    public InputStream getFileFromResource(String fileName) throws IOException {
+        InputStream is = getClass().getResourceAsStream(fileName);
+        if(is == null) {
+            throw new IOException("Failed to open file "+ fileName);
         }
-        else return new File(resource.getFile());
+        else return is;
     }
 
-    public String getFileContent(File file) {
-        if(file == null) return null;
+    public String getFileContent(InputStream stream) {
+        if(stream == null) return "null";
 
         String result = "";
 
-        try(FileReader reader = new FileReader(file);
-            BufferedReader br = new BufferedReader(reader)) {
-
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(stream))) {
             String line;
 
             while((line = br.readLine()) != null) result = result.concat(line + "\n");
 
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getInstance().error("Failed to load file");
         }
 
         return result;
