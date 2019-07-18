@@ -3,7 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="c5a77f57-55f1-4e23-8f90-c5ad4ed3059d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/texts/commands" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/texts/commands" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/AdminCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/AdminCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ICommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ICommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBotLauncher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/bot/SuperBotLauncher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/ChampionCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/ChampionCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command$InvalidCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command$WhenMappings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command$WhenMappings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/commands/HelpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/commands/HelpCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/listeners/DiscordListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/listeners/DiscordListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supervinicius/util/FileManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supervinicius/util/FileManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/texts/commands" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/texts/commands" afterDir="false" />
     </list>
     <list id="cd34116a-b884-489f-a473-b85f5732f2eb" name="Revert &quot;beta branch&quot;" comment="Revert &quot;beta branch&quot;&#10;&#10;This reverts commit a7a007f6" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,44 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-              <folding>
-                <element signature="e#32#190#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/util/FileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/texts/commands">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="128">
+              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -66,11 +49,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Class" />
         <option value="Enum" />
         <option value="Python Script" />
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -90,6 +74,7 @@
       <find>comando</find>
       <find>printdbg</find>
       <find>queue</find>
+      <find>splitMessage</find>
     </findStrings>
     <replaceStrings>
       <replace>printdbg</replace>
@@ -100,6 +85,7 @@
       <replace>private</replace>
       <replace>logger.drbug</replace>
       <replace>logger.debug</replace>
+      <replace>args</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -119,16 +105,18 @@
         <option value="$PROJECT_DIR$/src/main/python/loadImage.py" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/loadImage.py" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/util/Logger.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBot.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/util/FileManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/texts/commands" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ICommand.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/AdminCommand.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt" />
       </list>
     </option>
   </component>
@@ -193,7 +181,34 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="listeners" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SuperVinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="supervinicius" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SuperVinicius" type="b2602c69:ProjectViewProjectNode" />
@@ -325,7 +340,9 @@
       <workItem from="1563055069966" duration="5343000" />
       <workItem from="1563065744020" duration="12144000" />
       <workItem from="1563303727670" duration="6745000" />
-      <workItem from="1563311363091" duration="3393000" />
+      <workItem from="1563311363091" duration="3403000" />
+      <workItem from="1563314981529" duration="20000" />
+      <workItem from="1563462413260" duration="4410000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, command champion stops after downloading resources">
       <created>1563066549696</created>
@@ -383,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563314123728</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed help">
+      <created>1563314851305</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563314851305</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51761000" />
+    <option name="totallyTimeSpent" value="56201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,10 +423,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="732" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="732" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2840909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2931818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -536,13 +560,6 @@
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/util/ChampionCollector.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loadImage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -553,53 +570,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/util/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/listeners/DiscordListener.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding>
-            <element signature="e#33#189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBot.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-          <folding>
-            <element signature="e#32#186#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -618,16 +594,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/util/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="272">
           <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -635,20 +604,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/util/ChampionCollector.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ICommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="e#32#186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/texts/commands">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
-          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+          <caret line="4" column="45" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/Command.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#32#186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/LogCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/AdminCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/HelpCommand.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        <state relative-caret-position="208">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/listeners/DiscordListener.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
-            <element signature="e#32#190#0" expanded="true" />
+            <element signature="e#33#189#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBot.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/commands/ChampionCommand.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/supervinicius/bot/SuperBotLauncher.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>

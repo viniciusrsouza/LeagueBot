@@ -1,18 +1,32 @@
 package supervinicius.commands
 
+import net.dv8tion.jda.api.entities.TextChannel
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
+import supervinicius.bot.SuperBotLauncher
 import supervinicius.util.FileManager
 import java.io.InputStream
 
-class HelpCommand: Command("help") {
-    override fun run(event: GuildMessageReceivedEvent) {
-        val f: InputStream
-        try {
-            f = FileManager.getInstance().getFileFromResource("/texts/commands")
-            event.channel.sendMessage(FileManager.getInstance().getFileContent(f)).queue()
-        }catch (e: Exception) {
-            logger.error("could not find the commands file")
-            e.printStackTrace()
+class HelpCommand: Command("help", listOf("commands", "comandos", "ajuda")) {
+    override fun run(args: ArrayList<String>, channel: TextChannel) {
+        var message = ""
+        logger.debug("on help, args:$args size:${args.size}")
+        when {
+            args.size == 0 -> for(cmd in SuperBotLauncher.bot.commands)
+                message += "${cmd.getHelpMessage()}\n\n"
+            args.size == 1 -> for(cmd in SuperBotLauncher.bot.commands) {
+                logger.debug("cmd label = ${cmd.label}, args first = ${args.first()}")
+                if (args.first() == cmd.label) {
+                    message += cmd.getHelpMessage()
+                }
+            }
+            else -> return
         }
+
+        channel.sendMessage(message).queue()
+    }
+
+    override fun getHelpMessage(): String {
+        return "**$label [comando: opicional]**: exibe esta mensagem ou exibe a descrição do comando selecionado\n" +
+                "aliases: $aliases"
     }
 }

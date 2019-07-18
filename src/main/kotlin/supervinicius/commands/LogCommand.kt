@@ -1,11 +1,16 @@
 package supervinicius.commands
 
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
+import net.dv8tion.jda.api.entities.TextChannel
 
-class LogCommand : Command("savelog"){
-    override fun run(event: GuildMessageReceivedEvent) {
+class LogCommand : AdminCommand("savelog", listOf("exportlog", "log")){
+    override fun run(args: ArrayList<String>, channel: TextChannel) {
         if(logger.saveLog())
-            event.channel.sendMessage("Log salvo").queue()
+            channel.sendMessage("Log salvo").queue()
+    }
+
+    override fun getHelpMessage(): String {
+        return "**$label**[vinicin apenas]: salva o log atual do bot\n" +
+                "aliases: $aliases"
     }
 
 }

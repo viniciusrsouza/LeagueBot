@@ -1,14 +1,14 @@
 package supervinicius.commands
 
 import com.google.gson.GsonBuilder
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
+import net.dv8tion.jda.api.entities.TextChannel
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import supervinicius.dataclasses.Champion
 import supervinicius.util.FileManager
 import java.io.File
 
-class ChampionCommand: Command("champion") {
+class ChampionCommand: Command("champion", listOf("champ")) {
 
     val laneMap = mapOf(
         Pair("top",         "top"),
@@ -27,38 +27,29 @@ class ChampionCommand: Command("champion") {
         Pair("bottom",      "bot")
     )
 
-    override fun run(event: GuildMessageReceivedEvent) {
+    override fun run(args: ArrayList<String>, channel: TextChannel){
         val f = FileManager.getInstance()
 
-        event.channel.sendMessage("um momento, amigo").queue()
+        channel.sendMessage("um momento, amigo").queue()
         //message validation
-        val splitMessage: ArrayList<String>
-        try{
-            splitMessage = event.message.contentRaw.split(" ") as ArrayList
-        }catch (e: Exception) {
-            logger.error("failed to cast message to ArrayList")
-            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
-            return
-        }
 
-        val lane = splitMessage.last()
+        val lane = args.last()
 
-        logger.debug("size: ${splitMessage.size}")
+        logger.debug("size: ${args.size}")
 
 
-        if( (splitMessage.size < 3) or
+        if( (args.size < 2) or
             !laneMap.containsKey(lane) ) {
             logger.warn("Invalid command: lane doesn't exist or message is missing arguments")
-            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
+            sendErrorMessage(ICommand.InvalidCommand.ArgumentMissing, channel)
             return
         }
 
-        splitMessage.remove(lane)
-        splitMessage.removeAt(0)
-        logger.debug(splitMessage)
+        args.remove(lane)
+        logger.debug(args)
 
         var name = ""
-        splitMessage.forEach{ name += it }
+        args.forEach{ name += it }
         name = name.replace("'", "")
             .replace(".", "")
             .toLowerCase()
@@ -70,7 +61,7 @@ class ChampionCommand: Command("champion") {
 
         if(!f.writeToFile(champion, "champion.json")) {
             logger.error("failed to write champion.json")
-            sendErrorMessage(InvalidCommand.ArgumentMissing, event.channel)
+            sendErrorMessage(ICommand.InvalidCommand.ArgumentMissing, channel)
         }
 
         logger.debug("starting loadImage")
@@ -78,8 +69,8 @@ class ChampionCommand: Command("champion") {
         val exitValue = p.waitFor()
         logger.debug("loadImage finished with code $exitValue")
 
-        event.channel.sendMessage("Ta aí, querido").queue()
-        event.channel.sendFile(File(f.getFullPath("champion.png")), "$name.png").queue()
+        channel.sendMessage("Ta aí, querido").queue()
+        channel.sendFile(File(f.getFullPath("champion.png")), "$name.png").queue()
 
         if( !f.clearTemp() ){
             logger.warn("failed to delete old champion files! check the log file")
@@ -168,4 +159,8 @@ class ChampionCommand: Command("champion") {
         return weakness
     }
 
+    override fun getHelpMessage(): String {
+        return "**$label <champion> <lane>**: Mostra runas e spells do campeão na lane escolhida\n" +
+                "aliases: $aliases"
+    }
 }

@@ -4,28 +4,29 @@ import net.dv8tion.jda.api.entities.TextChannel
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
 import supervinicius.util.Logger
 
-abstract class Command(val label: String) {
-    val logger: Logger = Logger.getInstance()
+abstract class Command(override val label: String,
+                       override val aliases: List<String>): ICommand {
+    override val logger: Logger = Logger.getInstance()
 
-    enum class InvalidCommand{
-        ArgumentMissing
-    }
+    override infix fun handle(event: GuildMessageReceivedEvent): Boolean {
+        val cmd: ArrayList<String> = try{
+            event.message.contentRaw.toLowerCase().split(" ") as ArrayList
+        }catch (e: Exception) {
+            logger.error("failed to cast message to ArrayList")
+            arrayListOf(event.message.contentRaw.toLowerCase())
+        }
+        logger.debug(cmd)
 
-    infix fun handle(event: GuildMessageReceivedEvent): Boolean {
-
-        return if(event.message.contentRaw.startsWith(label)) {
-            Logger.getInstance().logCommand(event.message.contentRaw)
-            run(event)
+        return if(cmd.first() == label || aliases.contains(cmd.first())){
+            cmd.removeAt(0)
+            run(cmd, event.channel)
             true
         }else false
     }
 
-    abstract fun run(event: GuildMessageReceivedEvent)
-
-    fun sendErrorMessage(error: InvalidCommand, channel: TextChannel)
-    {
+    override fun sendErrorMessage(error: ICommand.InvalidCommand, channel: TextChannel) {
         when (error){
-            InvalidCommand.ArgumentMissing -> {
+            ICommand.InvalidCommand.ArgumentMissing -> {
                 channel.sendMessage("Comando inválido").queue()
             }
         }
