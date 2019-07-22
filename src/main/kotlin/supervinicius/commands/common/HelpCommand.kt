@@ -1,10 +1,8 @@
-package supervinicius.commands
+package supervinicius.commands.common
 
 import net.dv8tion.jda.api.entities.TextChannel
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
 import supervinicius.bot.SuperBotLauncher
-import supervinicius.util.FileManager
-import java.io.InputStream
+import supervinicius.commands.Command
 
 class HelpCommand: Command("help", listOf("commands", "comandos", "ajuda")) {
     override fun run(args: ArrayList<String>, channel: TextChannel) {

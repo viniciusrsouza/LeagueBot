@@ -1,6 +1,7 @@
-package supervinicius.commands
+package supervinicius.commands.admin
 
 import net.dv8tion.jda.api.entities.TextChannel
+import supervinicius.commands.AdminCommand
 
 class LogCommand : AdminCommand("savelog", listOf("exportlog", "log")){
     override fun run(args: ArrayList<String>, channel: TextChannel) {

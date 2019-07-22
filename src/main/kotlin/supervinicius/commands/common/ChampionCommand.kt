@@ -1,9 +1,12 @@
-package supervinicius.commands
+package supervinicius.commands.common
 
 import com.google.gson.GsonBuilder
 import net.dv8tion.jda.api.entities.TextChannel
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
+import supervinicius.bot.SuperBotLauncher
+import supervinicius.commands.Command
+import supervinicius.commands.ICommand
 import supervinicius.dataclasses.Champion
 import supervinicius.util.FileManager
 import java.io.File
@@ -54,7 +57,19 @@ class ChampionCommand: Command("champion", listOf("champ")) {
             .replace(".", "")
             .toLowerCase()
         logger.debug("Champion name: $name")
+
+        logger.debug("starting decodeChampion")
+        val decoder = Runtime.getRuntime().exec("python3 decodeChampion.py $name")
+        val decoderExitValue = decoder.waitFor()
+        logger.debug("decodeChampion finished with code $decoderExitValue")
+        if(decoderExitValue<0){
+            logger.error("failed to decode champion name: $name")
+            sendErrorMessage(ICommand.InvalidCommand.ArgumentMissing, channel)
+            return
+        }
         //end of validation
+
+        name = SuperBotLauncher.champions[decoderExitValue]
 
         val parser = GsonBuilder().setPrettyPrinting().create()
         val champion = parser.toJson(championParser(name, laneMap.getValue(lane)))
@@ -65,9 +80,9 @@ class ChampionCommand: Command("champion", listOf("champ")) {
         }
 
         logger.debug("starting loadImage")
-        val p = Runtime.getRuntime().exec("python3 loadImage.py")
-        val exitValue = p.waitFor()
-        logger.debug("loadImage finished with code $exitValue")
+        val imgLoader = Runtime.getRuntime().exec("python3 loadImage.py")
+        val imgLoaderExitValue = imgLoader.waitFor()
+        logger.debug("loadImage finished with code $imgLoaderExitValue")
 
         channel.sendMessage("Ta aí, querido").queue()
         channel.sendFile(File(f.getFullPath("champion.png")), "$name.png").queue()

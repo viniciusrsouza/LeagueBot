@@ -40,12 +40,19 @@ public class FileManager {
 
     public boolean writeToFile(String str, String name, String path){
         try {
-            File dir = new File(path);
-            boolean mkdir = dir.mkdir();
-            if(mkdir) Logger.getInstance().debug(path+" dir created!");
-            else Logger.getInstance().warn(path+" dir already exist or could not be created!");
+            String fullPath;
+            if(!path.equals("")) {
+                fullPath = path + File.separator + name;
 
-            PrintWriter writer = new PrintWriter(new File(path + File.separator + name), "UTF-8");
+                File dir = new File(path);
+                boolean mkdir = dir.mkdir();
+                if (mkdir) Logger.getInstance().debug(path + " dir created!");
+                else Logger.getInstance().warn(path + " dir already exist or could not be created!");
+            }else{
+                fullPath = name;
+            }
+
+            PrintWriter writer = new PrintWriter(new File(fullPath), "UTF-8");
             writer.println(str);
             writer.close();
             return true;

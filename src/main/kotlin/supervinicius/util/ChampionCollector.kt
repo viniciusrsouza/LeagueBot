@@ -9,7 +9,7 @@ fun getChampions(): List<String>{
 
 
     for(e in elements){
-        champions.add( e.attr("data-champion-name") )
+        champions.add( e.attr("data-champion-name").replace("'", "") )
     }
 
     return champions

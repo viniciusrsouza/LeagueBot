@@ -2,19 +2,19 @@ package supervinicius.bot
 
 import net.dv8tion.jda.api.AccountType
 import net.dv8tion.jda.api.JDABuilder
-import supervinicius.commands.ChampionCommand
-import supervinicius.commands.HelpCommand
-import supervinicius.commands.LogCommand
+import supervinicius.commands.common.ChampionCommand
+import supervinicius.commands.common.HelpCommand
+import supervinicius.commands.admin.LogCommand
+import supervinicius.commands.music.JoinCommand
 import supervinicius.listeners.DiscordListener
 
 class SuperBot (private val TOKEN: String) {
     val commands = listOf(
         HelpCommand(),
         ChampionCommand(),
-        LogCommand()
+        LogCommand(),
+        JoinCommand()
     )
-
-    val champions: ArrayList<String> = ArrayList()
 
     fun start() {
         val discordListener = DiscordListener(this)
