@@ -1,12 +1,12 @@
-package supervinicius.bot
+package leaguebot.bot
 
 import net.dv8tion.jda.api.AccountType
 import net.dv8tion.jda.api.JDABuilder
-import supervinicius.commands.common.ChampionCommand
-import supervinicius.commands.common.HelpCommand
-import supervinicius.commands.admin.LogCommand
-import supervinicius.commands.music.JoinCommand
-import supervinicius.listeners.DiscordListener
+import leaguebot.commands.common.ChampionCommand
+import leaguebot.commands.common.HelpCommand
+import leaguebot.commands.admin.LogCommand
+import leaguebot.commands.music.JoinCommand
+import leaguebot.listeners.DiscordListener
 
 class SuperBot (private val TOKEN: String) {
     val commands = listOf(

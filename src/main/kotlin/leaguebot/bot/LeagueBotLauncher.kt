@@ -1,7 +1,7 @@
-package supervinicius.bot
+package leaguebot.bot
 
-import supervinicius.util.FileManager
-import supervinicius.util.getChampions
+import leaguebot.util.FileManager
+import leaguebot.util.getChampions
 import java.util.stream.Collectors
 
 object SuperBotLauncher {
