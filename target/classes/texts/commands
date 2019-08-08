@@ -1,5 +1,0 @@
-**LeagueBot:**
-    **-Comandos:**
-        **help**: Imprime esta mensagem
-        **champion <champion> <lane>**: Mostra runas e spells do campeão na lane escolhida
-        **savelog**: salva o log atual do bot
