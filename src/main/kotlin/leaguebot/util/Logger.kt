@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class Logger private constructor() {
-    private var history: String? = null
-    private val MAX_SIZE = 10000
+    private var history: String = ""
+    private val maxSize = 10000
     private val logMap = HashMap<LogTypes, String>()
 
     enum class LogTypes {
@@ -38,7 +38,7 @@ class Logger private constructor() {
         print(print)
 
         history += logStr
-        if (history!!.length == MAX_SIZE) saveLog()
+        if (history.length == maxSize) saveLog()
     }
 
     fun saveLog(): Boolean {
@@ -82,7 +82,7 @@ class Logger private constructor() {
 
         fun getInstance(): Logger {
             if (instance == null) instance = Logger()
-            return instance
+            return instance as Logger
         }
     }
 

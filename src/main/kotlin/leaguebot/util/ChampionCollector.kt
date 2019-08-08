@@ -1,4 +1,4 @@
-package supervinicius.util
+package leaguebot.util
 
 import org.jsoup.Jsoup
 

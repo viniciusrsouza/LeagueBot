@@ -19,7 +19,12 @@ class FileManager private constructor() {
             BufferedReader(InputStreamReader(stream)).use { br ->
                 var line: String
 
-                while ((line = br.readLine()) != null) result = result + (line + "\n")
+                while (true){
+                    line = br.readLine()
+                    if(line == null) break
+
+                    result += (line + "\n")
+                }
 
             }
         } catch (e: IOException) {
@@ -75,7 +80,7 @@ class FileManager private constructor() {
 
         fun getInstance(): FileManager {
             if (instance == null) instance = FileManager()
-            return instance
+            return instance as FileManager
         }
     }
 }

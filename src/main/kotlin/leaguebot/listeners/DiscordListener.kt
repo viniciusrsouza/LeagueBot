@@ -1,11 +1,11 @@
-package supervinicius.listeners
+package leaguebot.listeners
 
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
-import supervinicius.bot.SuperBot
-import supervinicius.util.Logger
+import leaguebot.bot.LeagueBot
+import leaguebot.util.Logger
 
-class DiscordListener(val bot: SuperBot): ListenerAdapter() {
+class DiscordListener(val bot: LeagueBot): ListenerAdapter() {
     override fun onGuildMessageReceived(event: GuildMessageReceivedEvent) {
         if(event.author.isBot) return
 

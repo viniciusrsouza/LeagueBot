@@ -1,11 +1,9 @@
-package supervinicius.commands.music
+package leaguebot.commands.music
 
 import net.dv8tion.jda.api.Permission
 import net.dv8tion.jda.api.entities.TextChannel
-import net.dv8tion.jda.api.entities.VoiceChannel
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
-import net.dv8tion.jda.api.managers.AudioManager
-import supervinicius.commands.Command
+import leaguebot.commands.Command
 
 class JoinCommand: Command("chega+", ArrayList()) {
 

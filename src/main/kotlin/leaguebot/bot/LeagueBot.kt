@@ -8,7 +8,7 @@ import leaguebot.commands.admin.LogCommand
 import leaguebot.commands.music.JoinCommand
 import leaguebot.listeners.DiscordListener
 
-class SuperBot (private val TOKEN: String) {
+class LeagueBot (private val TOKEN: String) {
     val commands = listOf(
         HelpCommand(),
         ChampionCommand(),

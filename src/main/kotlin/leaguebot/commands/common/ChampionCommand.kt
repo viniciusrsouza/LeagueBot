@@ -1,14 +1,14 @@
-package supervinicius.commands.common
+package leaguebot.commands.common
 
 import com.google.gson.GsonBuilder
 import net.dv8tion.jda.api.entities.TextChannel
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import supervinicius.bot.SuperBotLauncher
-import supervinicius.commands.Command
-import supervinicius.commands.ICommand
-import supervinicius.dataclasses.Champion
-import supervinicius.util.FileManager
+import leaguebot.bot.LeagueBotLauncher
+import leaguebot.commands.Command
+import leaguebot.commands.ICommand
+import leaguebot.dataclasses.Champion
+import leaguebot.util.FileManager
 import java.io.File
 
 class ChampionCommand: Command("champion", listOf("champ")) {
@@ -69,7 +69,7 @@ class ChampionCommand: Command("champion", listOf("champ")) {
         }
         //end of validation
 
-        name = SuperBotLauncher.champions[decoderExitValue]
+        name = LeagueBotLauncher.champions[decoderExitValue]
 
         val parser = GsonBuilder().setPrettyPrinting().create()
         val champion = parser.toJson(championParser(name, laneMap.getValue(lane)))

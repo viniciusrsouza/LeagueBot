@@ -1,8 +1,8 @@
-package supervinicius.commands
+package leaguebot.commands
 
 import net.dv8tion.jda.api.entities.TextChannel
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
-import supervinicius.util.Logger
+import leaguebot.util.Logger
 
 interface ICommand {
     enum class InvalidCommand{

@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SuperVinicius" />
+        <module name="LeagueBot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SuperVinicius" target="1.7" />
+      <module name="LeagueBot" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

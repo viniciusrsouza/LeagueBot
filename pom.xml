@@ -3,8 +3,8 @@
     <properties>
         <kotlin.version>1.3.41</kotlin.version>
     </properties>
-    <groupId>supervinicus</groupId>
-    <artifactId>supervinicius</artifactId>
+    <groupId>leaguebot</groupId>
+    <artifactId>leaguebot</artifactId>
     <version>1.0</version>
     <repositories>
         <repository>
@@ -82,7 +82,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>supervinicius.bot.SuperBotLauncher</mainClass>
+                                    <mainClass>leaguebot.bot.LeagueBotLauncher</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

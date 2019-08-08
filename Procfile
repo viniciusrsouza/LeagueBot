@@ -1,1 +1,1 @@
-worker: java -jar target/supervinicius-1.0-jar-with-dependencies.jar
+worker: java -jar target/leaguebot-1.0-jar-with-dependencies.jar

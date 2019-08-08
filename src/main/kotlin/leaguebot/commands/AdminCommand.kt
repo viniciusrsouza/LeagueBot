@@ -1,4 +1,4 @@
-package supervinicius.commands
+package leaguebot.commands
 
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent
 
