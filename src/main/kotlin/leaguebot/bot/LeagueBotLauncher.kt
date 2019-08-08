@@ -10,7 +10,7 @@ object LeagueBotLauncher {
     @JvmStatic
     fun main(args: Array<String>) {
         val betaToken = "NjAwMTE2NDc3NDQxNDc0NTYy.XUx0Gw.SLtRfFld_PFbnC_VnHwWgIjEDZE"
-        val mainToken = "NTk5NDIzMDkzNjg1MDkyMzcy.XSlAOA.0NcSqJpuszdjXm-5sAbBgCgVU_4"
+        val mainToken = "NTk5NDIzMDkzNjg1MDkyMzcy.XUx6hQ.3xipniEjKxE3TYUr9WCYxIYPlmM"
 
 
         champions = getChampions() as ArrayList<String>
