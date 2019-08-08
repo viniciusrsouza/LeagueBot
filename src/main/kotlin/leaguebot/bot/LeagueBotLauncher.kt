@@ -15,7 +15,7 @@ object LeagueBotLauncher {
 
         champions = getChampions() as ArrayList<String>
         val strChampions = champions.stream().collect(Collectors.joining(","))
-        bot = LeagueBot(betaToken)
+        bot = LeagueBot(mainToken)
 
         FileManager.getInstance().writeToFile(strChampions, "champions.csv", "")
 
